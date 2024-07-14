@@ -1,0 +1,6 @@
+fastapi
+opencv-python-headless
+numpy
+tensorflow-cpu==2.6.0  # Replace with tensorflow if using GPU version
+Pillow
+uvicorn
