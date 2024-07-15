@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 
 const Predict = () => {
 
-    
-  const currentYear= new Date().getFullYear();
+
+  const currentYear = new Date().getFullYear();
   const [image, setImage] = useState(null);
   const [responseText, setResponseText] = useState('');
   const [showResponse, setShowResponse] = useState(false);
   const regimens = [
-    "Stay hydrated with herbal teas like honey and lemon. Use steam inhalation with eucalyptus or peppermint for congestion. Rest well and eat a balanced diet with immune-boosting foods like garlic, ginger, and turmeric. Consult your healthcare provider before combining with medical treatment.",
-    "Hydrate with herbal teas and honey. Use steam inhalation with eucalyptus or peppermint oils. Rest well and include immune-supportive foods like garlic and ginger. Coordinate with your healthcare provider to complement your medical treatment",
+    "Stay hydrated with herbal teas like honey and lemon. Use steam inhalation with eucalyptus or peppermint for congestion. Rest well and eat a balanced diet with immune-boosting foods like garlic, ginger, and turmeric.",
+    "Hydrate with herbal teas and honey. Use steam inhalation with eucalyptus or peppermint oils. Rest well and include immune-supportive foods like garlic and ginger.",
     "I'm happy to report that the findings are normal. There are no signs of any abnormalities or issues in the images examined. This is a reassuring indication of your current health status in the areas evaluated. Please continue to take good care of yourself."
   ];
 
@@ -35,7 +35,7 @@ const Predict = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict', formData, {
+      const response = await axios.post('https://radiantserver.onrender.com/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -71,6 +71,7 @@ const Predict = () => {
           <div className='xrayBox'>
             <h3>Prediction X-Ray</h3>
             <img src={image} alt="Selected" style={{ width: '150px', height: '150px', borderRadius: '15px', opacity: '0.8' }} />
+            <h3 className='loading' style={{ display: !showResponse ? "block" : "none" }}>Diagnosing...</h3>
           </div>
         )}
 
@@ -82,9 +83,11 @@ const Predict = () => {
           </div>
         )}
       </div>
+
       <div className='about'>
         <p id="copyright">©{currentYear} Radiant-AI.</p>
         <Link to="/" offset={-100} className='homeLink'><p>Go To Home</p></Link>
+        <a href='https://github.com/KeerthiKeswaran' target="_blank" rel="noreferrer">Model Details</a>
       </div>
     </div>
   );
