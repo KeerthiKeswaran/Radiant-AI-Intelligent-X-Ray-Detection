@@ -10,12 +10,18 @@ import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 tf.compat.v1.losses.sparse_softmax_cross_entropy
 from tensorflow.keras.models import load_model
-
+from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
-
 import io
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
+)
 
 
 model = load_model("RadiantModel-xs.h5")
