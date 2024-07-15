@@ -1,13 +1,18 @@
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
-import cv2
 import numpy as np
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+tf.compat.v1.losses.sparse_softmax_cross_entropy
 from tensorflow.keras.models import load_model
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
 import io
 
 app = FastAPI()
@@ -19,7 +24,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model = load_model("Covid19PredictionCnnModel.h5")
+model = load_model("RadiantModel-xs.h5")
 class_label =  ['Covid', 'Normal', 'Viral Pneumonia']
 size = (150,150)
 
