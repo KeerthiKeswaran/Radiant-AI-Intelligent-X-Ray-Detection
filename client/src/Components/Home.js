@@ -24,7 +24,7 @@ const Home = () => {
                 </video>
                 <div className="video-fade"></div>
                 <div className='NavBar'>
-                    <h1>Radiant-AI</h1>
+                    <h1>Probe2Cure</h1>
                     <ul>
                         <li><Link
                             to="/"
@@ -65,7 +65,7 @@ const Home = () => {
                 </div>
 
                 <div className='HeroContent'>
-                    <h1 className={showText ? 'fadeIn' : ''}>Welcome to Radiant-AI</h1>
+                    <h1 className={showText ? 'fadeIn' : ''}>Welcome to Probe2Cure</h1>
                     <p className={showText ? 'typing' : ''}>
                         Where Precision and Innovation Unite for Superior Medical Diagnostics <BsStars style={{ color: "antiquewhite" }} />
                     </p>
