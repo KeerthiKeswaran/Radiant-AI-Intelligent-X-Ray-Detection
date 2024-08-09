@@ -1,10 +1,10 @@
-# Radiant-AI: Intelligent X-Ray Detection System.
+# Probe2Cure: Intelligent X-Ray Detection System.
 
 **Website Link :** https://radiantai.vercel.app/ 
 
 ## Introduction
 
-**Radiant-AI** is an innovative web application designed to classify chest X-ray images into three categories: COVID-19, Normal, and Viral Pneumonia. Leveraging the power of Convolutional Neural Networks (CNNs), this application provides medical professionals and users with instant and accurate diagnostics, thereby assisting in timely medical decision-making.
+**Probe2Cure** is an innovative web application designed to classify chest X-ray images into three categories: COVID-19, Normal, and Viral Pneumonia. Leveraging the power of Convolutional Neural Networks (CNNs), this application provides medical professionals and users with instant and accurate diagnostics, thereby assisting in timely medical decision-making.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@
 
 ## Overview
 
-Radiant-AI is structured into a user-friendly interface where users can upload chest X-ray images and receive a diagnosis. The website is built using React for the frontend and FastAPI for the backend, with the core model being a TensorFlow-based CNN.
+Probe2Cure is structured into a user-friendly interface where users can upload chest X-ray images and receive a diagnosis. The website is built using React for the frontend and FastAPI for the backend, with the core model being a TensorFlow-based CNN.
 
 ## Architecture
 
@@ -45,7 +45,7 @@ Radiant-AI is structured into a user-friendly interface where users can upload c
 ## Features
 
 1. **Home Page:**
-   - Introduction to Radiant-AI.
+   - Introduction to Probe2Cure.
    - Video background and smooth navigation.
    - Sections for categories, working, and about us.
 
@@ -119,7 +119,7 @@ Radiant-AI is structured into a user-friendly interface where users can upload c
 
 ## Model Information
 
-- **Model Name:** RadiantModel-xs
+- **Model Name:** ProbingModel-xs
 - **Version:** 1.0
 - **Architecture:** Convolutional Neural Network (CNN)
 - **Classes:** COVID-19, Normal, Viral Pneumonia
@@ -139,7 +139,7 @@ Radiant-AI is structured into a user-friendly interface where users can upload c
 
 ## Conclusion
 
-Radiant-AI is committed to providing cutting-edge AI solutions for medical diagnostics. Our platform not only offers high accuracy in detecting critical conditions but also aims to support medical professionals with reliable and timely insights. We continue to evolve and improve our technology to better serve the healthcare community.
+Probe2Cure is committed to providing cutting-edge AI solutions for medical diagnostics. Our platform not only offers high accuracy in detecting critical conditions but also aims to support medical professionals with reliable and timely insights. We continue to evolve and improve our technology to better serve the healthcare community.
 
 ---
 
