@@ -85,7 +85,7 @@ const Predict = () => {
       </div>
 
       <div className='about'>
-        <p id="copyright">©{currentYear} Radiant-AI.</p>
+        <p id="copyright">©{currentYear} probe2cure.</p>
         <Link to="/" offset={-100} className='homeLink'><p>Go To Home</p></Link>
         <a href='https://github.com/KeerthiKeswaran' target="_blank" rel="noreferrer">Model Details</a>
       </div>
