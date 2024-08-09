@@ -80,9 +80,9 @@ const About = () => {
         </div>
         <div className="contact">
           <h3>Contact Us</h3>
-          <p><a href="mailto:keshwarankeerthi@gmail.com">radiantaisupport@gmail.com</a></p>
+          <p><a href="mailto:keshwarankeerthi@gmail.com">p2csupport@gmail.com</a></p>
         </div>
-        <p id="copyright">©{currentYear} Radiant-AI.</p>
+        <p id="copyright">©{currentYear} probe2cure.</p>
       </div>
     </div>
   );
